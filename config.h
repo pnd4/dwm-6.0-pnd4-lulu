@@ -18,7 +18,7 @@ static const char colors[NUMCOLORS][ColLast][9] = {
     { "#39ff14", "#dc143c", "#000000" }, // urgent -> grn border, red fg, blk bg
     { "#000000", "#1b8be0", "#000000" }, // occupied -> blk border, blue fg, blk bg
 };
-static const unsigned int statusmon = 0;        // On which monitor should the status appear
+
 static const unsigned int systrayspacing = 3;   // Systray spacing
 static const unsigned int borderpx = 2;         // Border pixel of windows
 static const unsigned int gappx = 35;           // Gap pixel between windows
@@ -118,6 +118,9 @@ static Key keys[] = {
     { MODKEY,                   XK_F11,                     spawn,          {.v = voldown } },
     { MODKEY,                   XK_F12,                     spawn,          {.v = volup } },
     { MODKEY,                   XK_Print,                   spawn,          {.v = scrot } },
+    { SEARCHKEY,                XK_F1,                      spawn,          {.v = mpdprev } },
+    { SEARCHKEY,                XK_F2,                      spawn,          {.v = mpdnext } },
+    { SEARCHKEY,                XK_F3,                      spawn,          {.v = mpdplay } },
     { SEARCHKEY,                XK_F6,                      spawn,          {.v = brightdown } },
     { SEARCHKEY,                XK_F7,                      spawn,          {.v = brightup } },
     { SEARCHKEY,                XK_F8,                      spawn,          {.v = volmute } },
